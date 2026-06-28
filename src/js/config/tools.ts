@@ -97,6 +97,7 @@ export const categories = [
     {
         name: 'Secure PDF',
         tools: [
+            { id: 'sanitize-pdf', name: 'Sanitize PDF', icon: 'shield', subtitle: 'Strip metadata, annotations, and form data from one or more PDFs.' },
             { id: 'encrypt', name: 'Encrypt PDF', icon: 'lock', subtitle: 'Add a password to protect your PDF.' },
             { id: 'decrypt', name: 'Decrypt PDF', icon: 'unlock', subtitle: 'Remove password protection from a PDF.' },
             { id: 'flatten', name: 'Flatten PDF', icon: 'layers', subtitle: 'Make form fields and annotations non-editable.' },

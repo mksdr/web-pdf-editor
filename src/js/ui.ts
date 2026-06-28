@@ -370,6 +370,30 @@ export const toolTemplates = {
 
     </div>
 `,
+    'sanitize-pdf': () => `
+        <h2 class="text-2xl font-bold text-white mb-4">Sanitize PDF</h2>
+        <p class="mb-6 text-gray-400">Choose sanitization options, then sanitize one or more PDF files in a single batch.</p>
+        ${createFileInputHTML({ multiple: true, accept: 'application/pdf', showControls: true })}
+        <div id="file-display-area" class="mt-4 space-y-2"></div>
+
+        <div id="sanitize-options" class="mt-6 space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <h3 class="text-sm font-semibold text-white uppercase tracking-wide">Sanitization Options</h3>
+            <label class="flex items-center gap-2 text-gray-300">
+                <input type="checkbox" id="sanitize-remove-metadata" checked class="w-4 h-4 rounded text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
+                Remove metadata
+            </label>
+            <label class="flex items-center gap-2 text-gray-300">
+                <input type="checkbox" id="sanitize-remove-annotations" checked class="w-4 h-4 rounded text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
+                Remove annotations
+            </label>
+            <label class="flex items-center gap-2 text-gray-300">
+                <input type="checkbox" id="sanitize-flatten-forms" class="w-4 h-4 rounded text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
+                Flatten form fields
+            </label>
+        </div>
+
+        <button id="process-btn" class="btn-gradient w-full mt-6" disabled>Sanitize & Download</button>
+    `,
     encrypt: () => `
         <h2 class="text-2xl font-bold text-white mb-4">Encrypt PDF</h2>
         <p class="mb-6 text-gray-400">Upload a PDF to create a new, password-protected version.</p>
